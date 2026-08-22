@@ -1,0 +1,19 @@
+class Solution {
+    public boolean checkDivisibility(int n) {
+        int sum=0;
+        int product=1;
+        int o=n;
+     while(n>0){
+        int digit=n%10;
+      sum+=digit;
+      product*=digit;
+      n=n/10;
+     }
+      
+     if(o%(sum+product)!=0){
+        return false;
+     }
+     
+     return true;
+    }
+}
